@@ -1,0 +1,31 @@
+.HomePage {
+    display: flex;
+    height: 100vh;
+    padding-top: 10%;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        border-top: 100vh solid transparent;
+        border-right: 100vw solid #FFF3EB;
+        width: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    &__title {
+        font-family: 'Inter', sans-serif;
+        font-size: 56px;
+        max-width: 624px;
+        font-weight: 600;
+        text-align: start;
+    }
+}

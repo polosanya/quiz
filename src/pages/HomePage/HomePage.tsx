@@ -1,19 +1,19 @@
-import { useNavigate } from 'react-router-dom';
+import { ReactComponent as Image } from 'assets/thumb.svg';
+import Button from 'components/Button/Button';
+import './HomePage.scss';
 
 function HomePage() {
-  const navigate = useNavigate();
-
   return (
     <div className="HomePage">
-      <h1>Welcome!</h1>
+      <Image className="HomePage__image" />
 
-      <button
-        type="button"
-        className="HomePage__button"
-        onClick={() => navigate('/quiz')}
-      >
-        Start game
-      </button>
+      <div className="HomePage__content">
+        <h1 className="HomePage__title">
+          Who wants to be a millionaire?
+        </h1>
+
+        <Button destination="/quiz">Start</Button>
+      </div>
     </div>
   );
 }
