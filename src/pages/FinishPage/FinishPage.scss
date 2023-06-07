@@ -1,0 +1,33 @@
+.FinishPage {
+    display: flex;
+    height: 100vh;
+    padding-top: 10%;
+    justify-content: center;
+    background-color: #F5F5F7;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    &__title {
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        color: #1C1C21;
+        opacity: 0.5;
+        text-align: start;
+        margin-bottom: 8px;
+    }
+
+    &__score {
+        font-family: 'Inter', sans-serif;
+        font-size: 56px;
+        max-width: 624px;
+        font-weight: 600;
+        text-align: start;
+        opacity: 1;
+        margin-top: 0;
+    }
+}

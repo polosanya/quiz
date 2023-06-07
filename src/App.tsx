@@ -1,3 +1,4 @@
+import FinishPage from 'pages/FinishPage/FinishPage';
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import HomePage from './pages/HomePage/HomePage';
@@ -14,6 +15,7 @@ function App() {
             element={<QuizPage />}
           />
         </Route>
+        <Route path="score" element={<FinishPage />} />
         <Route path="*" element={<h1 className="title">Page not found</h1>} />
       </Routes>
     </div>

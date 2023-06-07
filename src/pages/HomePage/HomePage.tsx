@@ -1,11 +1,11 @@
-import { ReactComponent as Image } from 'assets/thumb.svg';
+import { ReactComponent as ThumbImage } from 'assets/thumb.svg';
 import Button from 'components/Button/Button';
 import './HomePage.scss';
 
 function HomePage() {
   return (
     <div className="HomePage">
-      <Image className="HomePage__image" />
+      <ThumbImage className="HomePage__image" />
 
       <div className="HomePage__content">
         <h1 className="HomePage__title">

@@ -10,7 +10,7 @@ function QuizPage() {
       <button
         type="button"
         className="QuizPage__button"
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/score')}
       >
         Finish game
       </button>
