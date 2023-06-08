@@ -1,0 +1,31 @@
+.Option {
+  position: relative;
+  width: 390px;
+  height: 72px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: start;
+  line-height: 72px;
+  padding-left: 50px;
+  clip-path: polygon(10% 0, 90% 1%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+
+  &--small {
+    width: 240px;
+    height: 40px;
+    background-color: #F5F5F7;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+  }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   background-color: black;
+    // }
+}
