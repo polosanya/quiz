@@ -1,19 +1,16 @@
-import { useNavigate } from 'react-router-dom';
 import './Button.scss';
 
 interface Props {
-    destination: string,
+    onClick: () => void,
     children: React.ReactNode
 }
 
-function Button({ destination, children }: Props) {
-  const navigate = useNavigate();
-
+function Button({ onClick, children }: Props) {
   return (
     <button
       type="button"
       className="Button"
-      onClick={() => navigate(destination)}
+      onClick={onClick}
     >
       {children}
     </button>

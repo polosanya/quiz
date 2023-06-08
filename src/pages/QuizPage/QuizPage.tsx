@@ -1,14 +1,19 @@
 import Option from 'components/Option/Option';
 import quizConfig from 'config/quizConfig.json';
 import { useCallback, useMemo, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './QuizPage.scss';
+import { RootState } from 'features/store';
+import { increaseMoney } from 'features/moneySlice';
 
 const { questions } = quizConfig;
 
 const money = questions.map((question) => question.money);
 
 function QuizPage() {
+  // const moneyCount = useSelector((state: RootState) => state.money);
+  const dispatch = useDispatch();
   const [currentQuestionId, setCurrentQuestionId] = useState(0);
 
   const navigate = useNavigate();
@@ -23,6 +28,8 @@ function QuizPage() {
     const correctAnswer = currentQuestion.options[currentQuestion.correctAnswer];
 
     if (correctAnswer === option) {
+      dispatch(increaseMoney(currentQuestion.money));
+
       if (currentQuestion === questions[questions.length - 1]) {
         navigate('/score');
       } else {
