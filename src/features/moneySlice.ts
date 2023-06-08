@@ -15,9 +15,6 @@ const moneySlice = createSlice({
     increaseMoney: (state, action: PayloadAction<number>) => {
       state.amount = action.payload;
     },
-    // decreaseMoney: (state, action: PayloadAction<number>) => {
-    //   state.amount -= action.payload;
-    // },
     resetMoney: (state) => {
       state.amount = 0;
     },

@@ -8,13 +8,17 @@ interface Props {
 
 function Option({ variant, children, onClick }: Props) {
   return (
-    <button
-      type="button"
-      className={`Option ${variant === 'small' && 'Option--small'}`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    <div className={`Option ${variant === 'small' && 'Option--small'}`}>
+      <button
+        type="button"
+        className="Option__button"
+        onClick={onClick}
+      >
+        <span className="Option__button-text">
+          {children}
+        </span>
+      </button>
+    </div>
   );
 }
 

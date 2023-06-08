@@ -3,7 +3,6 @@ import moneyReducer from './moneySlice';
 
 const rootReducer = combineReducers({
   money: moneyReducer,
-  // Other reducers...
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

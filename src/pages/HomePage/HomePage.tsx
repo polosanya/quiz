@@ -1,8 +1,8 @@
 import { ReactComponent as ThumbImage } from 'assets/thumb.svg';
 import Button from 'components/Button/Button';
-import './HomePage.scss';
-import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './HomePage.scss';
 
 function HomePage() {
   const navigate = useNavigate();

@@ -19,8 +19,8 @@
         bottom: 122px;
         display: flex;
         flex-wrap: wrap;
-        gap: 36px;
-        max-width: calc(390px + 390px + 36px);
+        gap: 36px 0;
+        max-width: calc(420px + 420px + 36px);
     }
 
     &__sidebar {

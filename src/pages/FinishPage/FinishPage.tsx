@@ -29,7 +29,7 @@ function FinishPage() {
           </p>
         </div>
 
-        <Button onClick={handleResetMoney}>Finish</Button>
+        <Button onClick={handleResetMoney}>Try again</Button>
       </div>
     </div>
   );
