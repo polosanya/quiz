@@ -1,0 +1,157 @@
+@import "helpers/variables/variables";
+
+.Option {
+  position: relative;
+  width: 420px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 35.5px; // var
+    left: 0;
+    background-color: $black-40;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $orange-100;
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 390px;
+    height: 72px;
+    background-color: $black-40;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(10% 0, 90% 1%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+
+    &:hover {
+      background-color: $orange-100;
+    }
+
+    &:active {
+      & .Option__button {
+        background-color: $orange-100;
+      }
+  
+      & .Option__button-text {
+        background-color: $orange-5;
+      }
+    }
+
+    &-text {
+      background-color: $white-100;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 388px;
+      height: 70px;
+      clip-path: polygon(10% 0, 90% 1%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: start;
+      line-height: 72px;
+      padding-left: 50px;
+    }
+  }
+
+  &--selected {
+    & .Option__button {
+      background-color: $orange-100;
+    }
+
+    & .Option__button-text {
+      background-color: $orange-5;
+    }
+  }
+
+  &--correct {
+    & .Option__button {
+      background-color: $green-100;
+    }
+
+    & .Option__button-text {
+      background-color: $green-5;
+    }
+
+    &::before {
+      background-color: $green-100;
+    }
+  }
+
+  &--wrong {
+    & .Option__button {
+      background-color: $red-100;
+    }
+
+    & .Option__button-text {
+      background-color: $red-5;
+    }
+
+    &::before {
+      background-color: $red-100;
+    }
+  }
+
+  &--small,
+  &--small-selected,
+  &--small-disabled {
+    position: relative;
+    width: 376px;
+
+    & * {
+      cursor: default;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $black-40;
+      }
+    }
+
+    & .Option__button {
+      width: 240px;
+      height: 40px;
+      background-color: $black-40;
+
+      & .Option__button-text {
+        top: 1px;
+        left: 1px;
+        width: 238px;
+        height: 38px;
+        clip-path: polygon(10% 0, 90% 1%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+
+        line-height: 40px;
+        text-align: center;
+        padding: 0;
+      }
+    }
+
+    &::before {
+      top: 20px;
+    }
+  }
+
+  &--small-selected {
+    & .Option__button {
+      background-color: $orange-100;
+      color: $orange-100;
+    }
+
+    &::before {
+      background-color: $orange-100;
+    }
+  }
+
+  &--small-disabled {
+    & .Option__button {
+      color: $black-40;
+    }
+  }
+}
