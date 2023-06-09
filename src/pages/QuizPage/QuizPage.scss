@@ -1,13 +1,15 @@
+@import 'helpers/variables/variables';
+
 .QuizPage {
     height: 100vh;
-    background-color: #F5F5F7;
+    background-color: $black-5;
     padding: 133px 80px 122px;
 
     &__question {
         font-family: 'Inter', sans-serif;
         font-weight: 600;
         font-size: 32px;
-        color: #1C1C21;
+        color: $black-100;
         max-width: 624px;
         margin: 0;
         text-align: start;
@@ -21,19 +23,25 @@
         flex-wrap: wrap;
         gap: 36px 0;
         max-width: calc(420px + 420px + 36px);
+
+        &-letter {
+            color: $orange-100;
+            margin-right: 8px;
+        }
     }
 
     &__sidebar {
         position: absolute;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         top: 0;
         right: 0;
         width: 376px;
         height: 100%;
-        padding-top: 166px;
-        background-color: white;
+        // padding-top: 166px;
+        background-color: $white-100;
     }
 }

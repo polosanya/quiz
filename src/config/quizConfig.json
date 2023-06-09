@@ -1,148 +1,148 @@
 {
-    "questions": [
-      {
-        "id": 0,
-        "question": "What does HTML stand for?",
-        "options": [
-          "Hyper Text Markup Language",
-          "Home Tool Markup Language",
-          "Hyperlinks and Text Markup Language",
-          "Hyperlinking Text and Multimedia Language"
-        ],
-        "correctAnswer": 0,
-        "money": 500
-      },
-      {
-        "id": 1,
-        "question": "Which tag is used to define an unordered list in HTML?",
-        "options": [
-          "<ul>",
-          "<ol>",
-          "<li>",
-          "<list>"
-        ],
-        "correctAnswer": 0,
-        "money": 1000
-      },
-      {
-        "id": 2,
-        "question": "Which CSS property is used to change the text color of an element?",
-        "options": [
-          "color",
-          "text-color",
-          "font-color",
-          "text-style"
-        ],
-        "correctAnswer": 0,
-        "money": 2000
-      },
-      {
-        "id": 3,
-        "question": "Which CSS property is used to set the background color of an element?",
-        "options": [
-          "background-color",
-          "color",
-          "bgcolor",
-          "background"
-        ],
-        "correctAnswer": 0,
-        "money": 4000
-      },
-      {
-        "id": 4,
-        "question": "Which HTML tag is used to link an external CSS file?",
-        "options": [
-          "<link>",
-          "<style>",
-          "<css>",
-          "<script>"
-        ],
-        "correctAnswer": 0,
-        "money": 8000
-      },
-      {
-        "id": 5,
-        "question": "Which CSS property is used to create rounded corners?",
-        "options": [
-          "border-radius",
-          "border-style",
-          "border-round",
-          "border-corner"
-        ],
-        "correctAnswer": 0,
-        "money": 16000
-      },
-      {
-        "id": 6,
-        "question": "Which HTML tag is used to define a table row?",
-        "options": [
-          "<tr>",
-          "<td>",
-          "<th>",
-          "<table-row>"
-        ],
-        "correctAnswer": 0,
-        "money": 32000
-      },
-      {
-        "id": 7,
-        "question": "Which CSS property is used to control the spacing between lines of text?",
-        "options": [
-          "line-height",
-          "text-spacing",
-          "letter-spacing",
-          "line-spacing"
-        ],
-        "correctAnswer": 0,
-        "money": 64000
-      },
-      {
-        "id": 8,
-        "question": "Which HTML tag is used to define a hyperlink?",
-        "options": [
-          "<a>",
-          "<link>",
-          "<h>",
-          "<href>"
-        ],
-        "correctAnswer": 0,
-        "money": 125000
-      },
-      {
-        "id": 9,
-        "question": "Which CSS property is used to control the size of a font?",
-        "options": [
-          "font-size",
-          "text-size",
-          "font-style",
-          "text-style"
-        ],
-        "correctAnswer": 0,
-        "money": 250000
-      },
-      {
-        "id": 10,
-        "question": "Which HTML tag is used to define a heading?",
-        "options": [
-          "<h1>",
-          "<head>",
-          "<title>",
-          "<heading>"
-        ],
-        "correctAnswer": 0,
-        "money": 500000
-      },
-      {
-        "id": 11,
-        "question": "Which CSS property is used to control the positioning of an element?",
-        "options": [
-          "position",
-          "layout",
-          "display",
-          "float"
-        ],
-        "correctAnswer": 0,
-        "money": 1000000
-      }
-    ]
-  }
+  "questions": [
+    {
+      "id": 0,
+      "question": "What does CSS stand for?",
+      "options": [
+        {"id": 0, "text": "Cascade Style Sheets"},
+        {"id": 1, "text": "Create Super Style"},
+        {"id": 2, "text": "Colors Style Selector"},
+        {"id": 3, "text": "Cool Styles Creator"}
+      ],
+      "correctAnswers": [0],
+      "money": 500
+    },
+    {
+      "id": 1,
+      "question": "Which of the tags are semantic?",
+      "options": [
+        {"id": 0, "text": "<section>"},
+        {"id": 1, "text": "<footer>"},
+        {"id": 2, "text": "<aside>"},
+        {"id": 3, "text": "<div>"}
+      ],
+      "correctAnswers": [0, 1, 2],
+      "money": 1000
+    },
+    {
+      "id": 2,
+      "question": "Which CSS property is used to change the text color of an element?",
+      "options": [
+        {"id": 0, "text": "color"},
+        {"id": 1, "text": "text-color"},
+        {"id": 2, "text": "font-color"},
+        {"id": 3, "text": "text-style"}
+      ],
+      "correctAnswers": [0],
+      "money": 2000
+    },
+    {
+      "id": 3,
+      "question": "Which CSS property is used to set the background color of an element?",
+      "options": [
+        {"id": 0, "text": "background-color"},
+        {"id": 1, "text": "color"},
+        {"id": 2, "text": "bgcolor"},
+        {"id": 3, "text": "background"}
+      ],
+      "correctAnswers": [0],
+      "money": 4000
+    },
+    {
+      "id": 4,
+      "question": "Which HTML tag is used to link an external CSS file?",
+      "options": [
+        {"id": 0, "text": "<link>"},
+        {"id": 1, "text": "<style>"},
+        {"id": 2, "text": "<css>"},
+        {"id": 3, "text": "<script>"}
+      ],
+      "correctAnswers": [0],
+      "money": 8000
+    },
+    {
+      "id": 5,
+      "question": "Which CSS property is used to create rounded corners?",
+      "options": [
+        {"id": 0, "text": "border-radius"},
+        {"id": 1, "text": "border-style"},
+        {"id": 2, "text": "border-round"},
+        {"id": 3, "text": "border-corner"}
+      ],
+      "correctAnswers": [0],
+      "money": 16000
+    },
+    {
+      "id": 6,
+      "question": "Which HTML tag is used to define a table row?",
+      "options": [
+        {"id": 0, "text": "<tr>"},
+        {"id": 1, "text": "<td>"},
+        {"id": 2, "text": "<th>"},
+        {"id": 3, "text": "<table-row>"}
+      ],
+      "correctAnswers": [0],
+      "money": 32000
+    },
+    {
+      "id": 7,
+      "question": "What is box-sizing default value?",
+      "options": [
+        {"id": 0, "text": "content-box"},
+        {"id": 1, "text": "border-box"},
+        {"id": 2, "text": "border-corner"},
+        {"id": 3, "text": "box-default"}
+      ],
+      "correctAnswers": [0],
+      "money": 64000
+    },
+    {
+      "id": 8,
+      "question": "Which HTML tag is used to define a hyperlink?",
+      "options": [
+        {"id": 0, "text": "<a>"},
+        {"id": 1, "text": "<link>"},
+        {"id": 2, "text": "<h>"},
+        {"id": 3, "text": "<href>"}
+      ],
+      "correctAnswers": [0],
+      "money": 125000
+    },
+    {
+      "id": 9,
+      "question": "Which CSS property is used to control the size of a font?",
+      "options": [
+        {"id": 0, "text": "font-size"},
+        {"id": 1, "text": "text-size"},
+        {"id": 2, "text": "font-style"},
+        {"id": 3, "text": "text-style"}
+      ],
+      "correctAnswers": [0],
+      "money": 250000
+    },
+    {
+      "id": 10,
+      "question": "Which HTML tag is used to define a heading?",
+      "options": [
+        {"id": 0, "text": "<h1>"},
+        {"id": 1, "text": "<head>"},
+        {"id": 2, "text": "<title>"},
+        {"id": 3, "text": "<heading>"}
+      ],
+      "correctAnswers": [0],
+      "money": 500000
+    },
+    {
+      "id": 11,
+      "question": "Which CSS property is used to control the positioning of an element?",
+      "options": [
+        {"id": 0, "text": "position"},
+        {"id": 1, "text": "layout"},
+        {"id": 2, "text": "display"},
+        {"id": 3, "text": "float"}
+      ],
+      "correctAnswers": [0],
+      "money": 1000000
+    }
+  ]
+}
