@@ -19,7 +19,8 @@
         {"id": 0, "text": "<section>"},
         {"id": 1, "text": "<footer>"},
         {"id": 2, "text": "<aside>"},
-        {"id": 3, "text": "<div>"}
+        {"id": 3, "text": "<div>"},
+        {"id": 4, "text": "<span>"}
       ],
       "correctAnswers": [0, 1, 2],
       "money": 1000

@@ -1,3 +1,3 @@
-const letterOptions = ['A', 'B', 'C', 'D'];
+const letterOptions = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 export default letterOptions;

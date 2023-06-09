@@ -33,6 +33,16 @@
       background-color: $orange-100;
     }
 
+    &:active {
+      & .Option__button {
+        background-color: $orange-100;
+      }
+  
+      & .Option__button-text {
+        background-color: $orange-5;
+      }
+    }
+
     &-text {
       background-color: $white-100;
       position: absolute;
