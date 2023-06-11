@@ -1,31 +1,62 @@
+@import "helpers/variables/variables.scss";
+
 .HomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 48px 16px;
+
+  @include onDesktop {
+    flex-direction: row;
+    padding-top: 229px;
+  }
+
+  &::after {
+    content: "";
+    border-top: 100vh solid transparent;
+    border-right: 100vw solid #fff3eb;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__image {
+    width: 288px;
+    height: 192px;
+    align-self: center;
+
+    @include onDesktop {
+      align-self: normal;
+      width: 624px;
+      height: 367px;
+    }
+  }
+
+  &__content {
     display: flex;
-    height: 100vh;
-    padding-top: 10%;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 102px;
 
-    &::after {
-        content: '';
-        border-top: 100vh solid transparent;
-        border-right: 100vw solid #FFF3EB;
-        width: 0;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
+    @include onDesktop {
+      gap: 64px;
+      align-items: normal;
     }
+  }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
-    }
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
 
-    &__title {
-        font-family: 'Inter', sans-serif;
-        font-size: 56px;
-        max-width: 624px;
-        font-weight: 600;
-        text-align: start;
+    @include onDesktop {
+      text-align: start;
+      font-size: 56px;
+      max-width: 624px;
     }
+  }
 }
