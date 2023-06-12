@@ -1,11 +1,14 @@
+import menuCloseIcon from 'assets/menu-close.svg';
+import menuOpenIcon from 'assets/menu-open.svg';
 import Option from 'components/Option/Option';
+import Sidebar from 'components/Sidebar/Sidebar';
 import quizConfig from 'config/quizConfig.json';
 import { increaseMoney } from 'features/moneySlice';
-import { RootState } from 'features/store';
+import useMediaQuery from 'helpers/hooks/useMediaQuery';
 import OptionVariant from 'helpers/types/OptionVariant';
 import letterOptions from 'helpers/variables/constants';
 import { useCallback, useMemo, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './QuizPage.scss';
 
@@ -14,15 +17,14 @@ const { questions } = quizConfig;
 const money = questions.map((question) => question.money);
 
 function QuizPage() {
-  const moneyCount = useSelector((state: RootState) => state.money.amount);
+  const navigate = useNavigate();
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const dispatch = useDispatch();
   const [currentQuestionId, setCurrentQuestionId] = useState(0);
+  const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const selectedCorrectAnswers: number[] = useMemo(() => [], [currentQuestionId]);
-
-  const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
-
-  const navigate = useNavigate();
 
   const currentQuestion = useMemo(
     () => questions.find((question) => question.id === currentQuestionId) || questions[0],
@@ -111,9 +113,7 @@ function QuizPage() {
                   variant={optionVariant}
                   onClick={() => handleAnswer(option.id)}
                 >
-                  <span className="QuizPage__options-letter">
-                    {letterOptions[index]}
-                  </span>
+                  <span className="QuizPage__options-letter">{letterOptions[index]}</span>
 
                   {option.text}
                 </Option>
@@ -123,26 +123,30 @@ function QuizPage() {
         </>
       )}
 
-      {money && (
-        <div className="QuizPage__sidebar">
-          {money.map((value) => {
-            let optionVariant = OptionVariant.Small;
-
-            if (moneyCount >= value) {
-              optionVariant = OptionVariant.SmallDisabled;
-            }
-
-            if (currentQuestion.money === value) {
-              optionVariant = OptionVariant.SmallSelected;
-            }
-
-            return (
-              <Option variant={optionVariant} key={value}>
-                {`$${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`}
-              </Option>
-            );
-          })}
-        </div>
+      {isDesktop ? (
+        money && (
+          <div className="QuizPage__sidebar">
+            <Sidebar options={money} currentOption={currentQuestion.money} />
+          </div>
+        )
+      ) : (
+        <>
+          <button
+            className="QuizPage__menu-icon"
+            onClick={() => setIsMenuOpen((prevState) => !prevState)}
+            type="button"
+          >
+            <img
+              src={isMenuOpen ? menuCloseIcon : menuOpenIcon}
+              alt="menu-icon"
+            />
+          </button>
+          {isMenuOpen && (
+            <div className="QuizPage__sidebar">
+              <Sidebar options={money} currentOption={currentQuestion.money} />
+            </div>
+          )}
+        </>
       )}
     </div>
   );
