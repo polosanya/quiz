@@ -17,3 +17,16 @@ $green-5: #e6faea;
     @content;
   }
 }
+
+@mixin setImageSizes {
+  width: 288px;
+  height: 192px;
+  align-self: center;
+
+
+  @include onDesktop {
+    width: 624px;
+    height: 367px;
+    align-self: normal; 
+  }
+}

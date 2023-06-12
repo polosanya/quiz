@@ -141,6 +141,7 @@ function QuizPage() {
               alt="menu-icon"
             />
           </button>
+
           {isMenuOpen && (
             <div className="QuizPage__sidebar">
               <Sidebar options={money} currentOption={currentQuestion.money} />

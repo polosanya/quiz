@@ -49,8 +49,13 @@
   &__sidebar {
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     height: 100%;
+
+    @include onDesktop {
+      left: auto;
+    }
   }
 
   &__menu-icon {

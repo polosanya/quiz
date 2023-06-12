@@ -1,31 +1,54 @@
+@import "helpers/variables/variables";
+
 .FinishPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background-color: $black-5;
+  padding: 48px 16px;
+
+  @include onDesktop {
+    flex-direction: row;
+    padding-top: 229px;
+  }
+
+  &__image {
+    @include setImageSizes;
+  }
+
+  &__content {
     display: flex;
-    height: 100vh;
-    padding-top: 10%;
-    justify-content: center;
-    background-color: #F5F5F7;
+    flex-direction: column;
+    gap: 64px;
+    margin-top: 40px;
+  }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
-    }
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $black-100;
+    opacity: 0.5;
+    margin-bottom: 8px;
+    text-align: center;
 
-    &__title {
-        font-size: 32px;
-        font-weight: 600;
-        color: #1C1C21;
-        opacity: 0.5;
-        text-align: start;
-        margin-bottom: 8px;
+    @include onDesktop {
+      font-size: 32px;
+      text-align: start;
     }
+  }
 
-    &__score {
-        font-size: 56px;
-        width: 624px;
-        font-weight: 600;
-        text-align: start;
-        opacity: 1;
-        margin-top: 0;
+  &__score {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    margin: 0;
+
+    @include onDesktop {
+      width: 624px;
+      font-size: 56px;
+      text-align: start;
     }
+  }
 }
